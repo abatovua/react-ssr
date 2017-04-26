@@ -68,6 +68,6 @@ export const searchProducts = query => ({
 	type: SEARCH_PRODUCTS,
 	payload: query,
 	meta: {
-		debounce: { time: 300	}
+		debounce: { time: 300 }
 	}
 });

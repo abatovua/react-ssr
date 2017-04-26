@@ -63,6 +63,6 @@ export const findCategories = query => ({
 	type: SEARCH_CATEGORIES,
 	payload: query,
 	meta: {
-		debounce: { time: 300	}
+		debounce: { time: 300 }
 	}
 });
