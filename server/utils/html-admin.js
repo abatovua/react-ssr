@@ -1,5 +1,5 @@
 const adminHTML = (html, state) => {
-	return `
+  return `
 		<!DOCTYPE html>
 		<html>
 		<head>

@@ -11,50 +11,50 @@ import { addCategory } from '../../actions/categories.action';
 
 class CategoryAddForm extends Component {
 
-	addCategory = ({name, description}) => {
-		this.props.addCategory({name, description});
-	}
+  addCategory = ({ name, description }) => {
+    this.props.addCategory({ name, description });
+  }
 
-	render() {
-		const { handleSubmit, invalid } = this.props;
+  render() {
+    const { handleSubmit, invalid } = this.props;
 
-		return (
-			<form onSubmit={handleSubmit(this.addCategory)}>
-				<Field
-					name="name"
-					component={renderMUITextField}
-					muiProps={{
-						id: "category-name",
-						hintText: "Name",
-						floatingLabelText: "Name",
-						fullWidth: true
-					}}
-				/>
-				<Field
-					name="description"
-					component={renderMUITextField}
-					muiProps={{
-						id: "category-description",
-						hintText: "Description",
-						floatingLabelText: "Description",
-						fullWidth: true
-					}}
-				/>
-				<RaisedButton
-					primary={true}
-					disabled={invalid}
-					type="submit"
-				>Publish</RaisedButton>
-			</form>
-		);
-	}
+    return (
+      <form onSubmit={handleSubmit(this.addCategory)}>
+        <Field
+          name="name"
+          component={renderMUITextField}
+          muiProps={{
+            id: "category-name",
+            hintText: "Name",
+            floatingLabelText: "Name",
+            fullWidth: true
+          }}
+        />
+        <Field
+          name="description"
+          component={renderMUITextField}
+          muiProps={{
+            id: "category-description",
+            hintText: "Description",
+            floatingLabelText: "Description",
+            fullWidth: true
+          }}
+        />
+        <RaisedButton
+          primary={true}
+          disabled={invalid}
+          type="submit"
+        >Publish</RaisedButton>
+      </form>
+    );
+  }
 }
 
 const validate = requiredValidator(['name', 'description']);
 
 const ReduxFormWrapped = reduxForm({
-	form: 'addCategory',
-	validate
+  form: 'addCategory',
+  validate
 })(CategoryAddForm);
 
 export default connect(null, { addCategory })(ReduxFormWrapped);

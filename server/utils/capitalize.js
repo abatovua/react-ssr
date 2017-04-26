@@ -1,1 +1,1 @@
-export const capitalize =  (string) => string ? string.replace(/\b\w/g, l => l.toUpperCase()) : 'Admin Panel';
+export const capitalize = (string) => string ? string.replace(/\b\w/g, l => l.toUpperCase()) : 'Admin Panel';

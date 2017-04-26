@@ -20,11 +20,11 @@ const store = configureStore(window.__initial__);
 delete window.__initial__;
 
 render(
-	<Provider store={store}>
-		<MuiThemeProvider>
-			<BrowserRouter>
-				<AdminApp/>
-			</BrowserRouter>
-		</MuiThemeProvider>
-	</Provider>
-	, document.getElementById('main'));
+  <Provider store={store}>
+    <MuiThemeProvider>
+      <BrowserRouter>
+        <AdminApp/>
+      </BrowserRouter>
+    </MuiThemeProvider>
+  </Provider>
+  , document.getElementById('main'));

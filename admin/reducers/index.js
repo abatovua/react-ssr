@@ -5,7 +5,7 @@ import products from './products.reducer';
 import form from './forms.reducer';
 
 export const rootReducer = combineReducers({
-	form,
-	categories,
-	products
+  form,
+  categories,
+  products
 });

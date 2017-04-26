@@ -17,7 +17,7 @@ const PORT = 4200;
 const app = express();
 
 if (process.env.NODE_ENV !== "production") {
-	app.use(morgan('dev'));
+  app.use(morgan('dev'));
 }
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -28,10 +28,10 @@ app.use('/api', apiRoutes);
 app.use('/admin', adminRoutes);
 
 app.use((err, req, res, next) => {
-	console.log(err.toString());
-	res.status(503).end('Internal server error. Please try later.');
+  console.log(err.toString());
+  res.status(503).end('Internal server error. Please try later.');
 });
 
 app.listen(PORT, () => {
-	console.log(`Server is listening on port ${PORT}`);
+  console.log(`Server is listening on port ${PORT}`);
 });
