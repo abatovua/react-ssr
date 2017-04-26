@@ -1,0 +1,4 @@
+{
+  "ignore": ["client/*", "node_modules"],
+  "watch": ["backend-bundle.js"]
+}

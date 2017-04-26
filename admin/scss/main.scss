@@ -1,0 +1,64 @@
+html {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h5 {
+  margin: 20px 0;
+  font-size: 14px;
+}
+
+.content-admin {
+  display: flex;
+}
+
+.admin-page-wrapper {
+  flex: 1;
+  margin-left: 300px;
+}
+
+.admin-page-content {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 64px;
+}
+
+.admin-page-cell,
+.admin-page-row {
+  padding: 5px 5px 2.5px 5px;
+  box-sizing: border-box;
+}
+
+.admin-page-cell-content,
+.admin-page-row-content {
+  padding: 20px 30px;
+  height: 100%;
+}
+
+.admin-page-cell {
+  flex: {
+    grow: 1;
+    shrink: 1;
+    basis: 300px;
+  }
+  width: 100%;
+}
+
+.admin-page-row {
+  flex: {
+    grow: 1;
+    shrink: 1;
+    basis: 100%;
+  }
+}
+
+.active-route {
+  background: #E0E0E0 !important;
+}
+
+@import 'sidebar';
+@import 'categories';
